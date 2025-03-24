@@ -107,6 +107,9 @@ class Game
 			case "look":
 				lookaround();
 				break;
+			case "status":
+				HealthStatus();
+				break;
 		}
 
 		return wantToQuit;
@@ -154,5 +157,8 @@ class Game
 
 	private void lookaround(){
 		Console.WriteLine(player.CurrentRoom.GetLongDescription());
+	}
+	private void HealthStatus(){
+		Console.WriteLine($"you have {Player.Health} HP");
 	}
 }
